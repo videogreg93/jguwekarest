@@ -12,6 +12,7 @@ services:
       - "mongo:mongodb"
     ports:
       - "8081:8080"
+      - "8849:8849"
     depends_on:
       - mongo
     labels:

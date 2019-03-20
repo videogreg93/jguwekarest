@@ -1,0 +1,21 @@
+Builder l'image Docker
+
+    - Télécharger le code source de Github
+		git clone https://github.com/videogreg93/jguwekarest
+    - Naviguer dans le nouveau dossier
+		cd jguwekarest
+    - Compiler le WAR avec maven
+		mvn clean package
+    - Build l'image Docker (remplacer dockerhubuse avec votre compte dockerhub)
+		docker build -t dockerhubuser/jguweka:OAS3 .
+    - Vérifier les images
+		docker images
+
+Rouler le container Docker
+
+	- Il faut aussi créer une container MongoDB:
+		docker pull mongo; docker run --name mongodb -d mongo
+    - Rouler l'image local
+		docker run -p 8080:8080 -p 8849:8849 --link mongodb:mongodb dockerhubuser/jguweka:OAS3
+    - Visionner le Swagger-UI:
+		e.g.: firefox http://0.0.0.0:8080
