@@ -1,9 +1,0 @@
-Configuer JProfiler
-
-Une fois le container lancé (voire le fichier pour cela si ce n'est pas déjà fait):
-
-	- docker exec -it [container-name] bash
-	- cd /usr/local/jrofiler11/
-	- bin/jpenable
-	
-	Ensuite appuyer sur 1 pour le mode, et 8849 pour le port.
